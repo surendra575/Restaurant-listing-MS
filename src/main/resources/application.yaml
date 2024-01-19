@@ -1,0 +1,17 @@
+server:
+  port: 9091
+spring:
+  profiles:
+    active: dev
+  application:
+    name: RESTAURENT-SERVICE
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    #to convert ORM (findAll()) language to DB specific language (select *from restaurent)
+    #org.hibernate.dialect.MySQL8Dialect
+    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
